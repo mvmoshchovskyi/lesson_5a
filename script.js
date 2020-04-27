@@ -85,17 +85,15 @@ class Prince extends Human {
 
     findCinderell(array) {
         let find = null;
-        for (const item of array) {
-            if (item.footSize === this.shoeSize) {
-                find = item;
-            }
-        }
-        if (find) {
-            console.log("My Sinderella name is" + find.name)
-        } else {
-            console.log("I not find my Cinderella")
-        }
-
+        find = array.find(value=> value.footSize === this.shoeSize)
+        // for (const item of array) {
+        //     if (item.footSize === this.shoeSize) {
+        //         find = item;
+        //     }
+        // }
+        // find
+        //     ? console.log("My Sinderella name is" + find.name)
+        //     : console.log("I not find my Cinderella")
     }
 }
 
@@ -114,7 +112,7 @@ let cinderella10 = new Cinderella("Ivanka", 40, 47)
 let arrayCinderells = [cinderella1, cinderella2, cinderella3, cinderella4,
     cinderella5, cinderella6, cinderella7, cinderella8, cinderella9, cinderella10]
 
-const prince1 = new Prince('Albert', 25, 38)
+const prince1 = new Prince('Albert', 25, 35)
 
 prince1.findCinderell(arrayCinderells)
 //
